@@ -12,9 +12,7 @@
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/waitlist">Waitlist</a>
                     </li>
-                    <li>
-                        <a href="giftcards">Giftcards</a>
-                    </li>
+                   
                     <li>
                         <a href="offers">Offers</a>
                     </li>

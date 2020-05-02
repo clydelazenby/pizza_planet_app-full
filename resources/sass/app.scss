@@ -4,6 +4,9 @@
 @import "bootstrap.min.css";
 @import "reset";
 @import "pages/about";
+@import "pages/waitlist";
+@import "pages/offers";
+@import "menu/index";
 @import "home";
 body {
     line-height: 1;
@@ -134,7 +137,7 @@ body {
         background: radial-gradient(ellipse at center, #ff0a0a 0%, #a51600 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         ;
-        overflow: hidden;
+        // overflow: hidden;
     }
 }
 
@@ -269,7 +272,7 @@ body {
             &:hover {
                 .background {
                     background: #c97f30;
-                    transform: translate3d(0, -100px, 0);
+                    transform: translate3d(0, -200px, 0);
                 }
                 .content {
                     .food-title {
@@ -456,8 +459,14 @@ h2 {
     }
 }
 
+.content-box {
+    background: white;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199px) {}
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) and (max-width:3000px) {}
