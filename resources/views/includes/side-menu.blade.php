@@ -1,4 +1,4 @@
-<div class="welcome-menu">
+<div class="side-menu">
             <a href="/" class="logo">
             
                 <img src="https://cdn.clipart.email/e07e234760ce1954118f8fc00f0239a8_toy-story-pizza-planet-logos_900-900.jpeg">
@@ -8,7 +8,8 @@
                     Menu
                 </div>
                 <ul class="links">
-                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/menu">Food</a></li>
+                    <li><a href="/about">About Us</a></li>
                     <li><a href="/waitlist">Waitlist</a>
                     </li>
                     <li>

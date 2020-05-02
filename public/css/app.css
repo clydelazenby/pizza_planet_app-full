@@ -139,95 +139,7 @@ table {
   border-spacing: 0;
 }
 
-#welcome {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 350px 1fr;
-  height: 100vh;
-}
-
-#welcome .welcome-menu {
-  background: 0;
-  padding: 50px;
-  position: relative;
-}
-
-#welcome .welcome-menu .logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-#welcome .welcome-menu .logo img {
-  max-width: 100px;
-}
-
-#welcome .welcome-menu .menu {
-  margin-bottom: 50px;
-}
-
-#welcome .welcome-menu .menu .menu-title {
-  text-transform: uppercase;
-  color: blue;
-  font-weight: 700;
-  font-size: 1.2rem;
-  border-bottom: 1px solid grey;
-  padding-bottom: 20px;
-  margin-bottom: 50px;
-}
-
-#welcome .welcome-menu .menu .links li a {
-  font-size: 1.1rem;
-  color: black;
-  font-weight: 700;
-  text-decoration: none;
-  margin-bottom: 1.4rem;
-  display: block;
-  transition: color 0.3s ease-in-out;
-}
-
-#welcome .welcome-menu .menu .links li a:hover {
-  color: red;
-}
-
-#welcome .welcome-menu .social-icons {
-  display: flex;
-}
-
-#welcome .welcome-menu .social-icons a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: grey;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: white;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-#welcome .welcome-menu .location {
-  align-self: center;
-  position: absolute;
-  bottom: 0;
-}
-
-#welcome .welcome-menu .location .address {
-  color: #7a8d99;
-  margin-bottom: 20px;
-  line-height: 1.7;
-}
-
-#welcome .welcome-menu .location .phone-number a {
-  color: blue;
-  font-size: 2rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-#welcome .welcome-jumbo {
+.welcome-jumbo {
   max-width: calc(100vw - 350px);
   display: flex;
   justify-content: center;
@@ -243,7 +155,7 @@ table {
   padding: 100px;
 }
 
-#welcome .welcome-jumbo .status {
+.welcome-jumbo .status {
   display: inline-block;
   padding: 10px 15px;
   font-size: 0.8rem;
@@ -255,7 +167,7 @@ table {
   margin-bottom: 20px;
 }
 
-#welcome .welcome-jumbo h1 {
+.welcome-jumbo h1 {
   font-size: 4rem;
   font-weight: 900;
   align-self: flex-start;
@@ -263,7 +175,7 @@ table {
   margin-bottom: 100px;
 }
 
-#welcome .welcome-jumbo .pizza {
+.welcome-jumbo .pizza {
   width: 100%;
   max-width: 1000px;
   -webkit-animation: moveUpandDown 1s linear infinite;
@@ -289,6 +201,125 @@ table {
   50% {
     bottom: 30px;
   }
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#app-layout {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 350px 1fr;
+  height: 100vh;
+}
+
+#app-layout .side-menu {
+  background: 0;
+  padding: 50px;
+  position: relative;
+}
+
+#app-layout .side-menu .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#app-layout .side-menu .logo img {
+  max-width: 100px;
+}
+
+#app-layout .side-menu .menu {
+  margin-bottom: 50px;
+}
+
+#app-layout .side-menu .menu .menu-title {
+  text-transform: uppercase;
+  color: blue;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 1px solid grey;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+#app-layout .side-menu .menu .links li a {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 1.4rem;
+  display: block;
+  transition: color 0.3s ease-in-out;
+}
+
+#app-layout .side-menu .menu .links li a:hover {
+  color: red;
+}
+
+#app-layout .side-menu .social-icons {
+  display: flex;
+}
+
+#app-layout .side-menu .social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#app-layout .side-menu .location {
+  align-self: center;
+  position: absolute;
+  bottom: 0;
+}
+
+#app-layout .side-menu .location .address {
+  color: #7a8d99;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+#app-layout .side-menu .location .phone-number a {
+  color: blue;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 #information {
@@ -389,6 +420,29 @@ table {
   position: relative;
 }
 
+#food-preview .container .left-btn,
+#food-preview .container .right-btn {
+  background: red;
+  color: white;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#food-preview .container .left-btn {
+  left: 0;
+}
+
+#food-preview .container .right-btn {
+  left: 0;
+}
+
 #food-preview .food-slider {
   width: 100%;
   white-space: nowrap;
@@ -462,36 +516,5 @@ h2 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
 }
 
