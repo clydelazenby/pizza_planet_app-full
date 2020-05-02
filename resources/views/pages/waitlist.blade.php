@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <div class="welcome-jumbo">
+ 
             
             <h1>Wait List</h1>
           
