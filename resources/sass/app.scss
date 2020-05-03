@@ -7,6 +7,7 @@
 @import "pages/waitlist";
 @import "pages/offers";
 @import "menu/index";
+@import "menu/single-menu";
 @import "home";
 body {
     line-height: 1;
@@ -259,13 +260,13 @@ body {
         // max-width: 1400px;
         // display: flex;
         // margin-bottom: 2rem;
-        // // font-size: 0;
+        // font-size: 0;
         white-space: nowrap;
         transform: translate3d(-0%, 0, 0);
         .slide {
             width: 20%;
             position: relative;
-            height: 700px;
+            height: 550px;
             cursor: pointer;
             display: inline-block;
             white-space: normal;
@@ -296,7 +297,7 @@ body {
             .content {
                 position: absolute;
                 z-index: 2;
-                padding: 20px;
+                padding: 0px;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -318,6 +319,8 @@ body {
             img {
                 width: 95%;
                 max-width: 200px;
+                vertical-align: bottom;
+                display: table-cell;
             }
         }
     }
@@ -462,7 +465,7 @@ h2 {
 .content-box {
     background: white;
     padding: 10px;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 }
 
 // Large devices (desktops, 992px and up)

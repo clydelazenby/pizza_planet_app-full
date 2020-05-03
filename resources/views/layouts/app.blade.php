@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Pizza Planet</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -53,7 +53,7 @@
                 font-size: 84px;
             }
 
-            .links > a {
+            .links a {
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
