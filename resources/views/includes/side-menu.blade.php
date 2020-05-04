@@ -10,11 +10,13 @@
                 <ul class="links">
                     <li><a href="/menu">Food</a></li>
                     <li><a href="/about">About Us</a></li>
-                    <li><a href="/waitlist">Waitlist</a>
+                    <li><a href="/reservations">Reservations</a>
                     </li>
-                   
-                    <li>
+                   <li>
                         <a href="offers">Offers</a>
+                    </li>
+                    <li>
+                        <a href="contact">Contact</a>
                     </li>
                 </ul>
             </div>
