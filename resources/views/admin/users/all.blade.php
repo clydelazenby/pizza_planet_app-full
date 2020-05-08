@@ -52,7 +52,7 @@
                                         <tbody>
                                         @foreach ($users as $user)
                                                 <tr>
-                                                <th scope="row">1</th>
+                                                <th scope="row">{{$user->id}}</th>
                                                 <td>{{$user->fname}} {{$user->lname}}</td>
                                                 <td>{{date('m/d/y', strtotime
                                                 ($user->updated_at))}}</td>
@@ -60,7 +60,15 @@
                                                 <a href="/admin/users/{{$user->id}}/edit"><i class="far fa-edit"></i></a>
                                                 </td>
                                                 <td>
-                                                <a href="/admin/users/{{$user->id}}/delete"onclick="if(!confirm('Are you sure you want to delete User?')){return false; }"><i class="far fa-trash-alt"></i>
+                                                {{-- <a href="/admin/users/{{$user->id}}/delete"onclick="if(!confirm('Are you sure you want to delete User?')){return false; }"><i class="far fa-trash-alt"></i> --}}
+
+                                                <a  href="#"onclick="event.preventDefault();
+                                                document.getElementById('delete-user{{$user->id}}').submit();"><i class="far fa-trash-alt"></i>
+
+                                                <form id="delete-user{{$user->id}}" action="/admin/users/{{$user->id}}/delete" method="POST" style="display: none;">
+                                                @method('DELETE')
+                                                @csrf
+                                                </form>
                                                 </td>
                                                 </tr>
                                         @endforeach
