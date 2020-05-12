@@ -13,6 +13,7 @@ class FoodItem extends Model
     ];
 
     public function categories(){
-    return $this->belongsTo('App\FoodCategory');
+        return $this->belongsTo('App\FoodCategory');
+    }
 }
-}
+

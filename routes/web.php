@@ -52,7 +52,13 @@ Route::get('/admin/food-items','admin\FoodItemsController@index');
 
 Route::get('/admin/food-items/create','admin\FoodItemsController@create');
 
+Route::post('/admin/food-items', 'admin\FoodItemsController@store');
+
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+
+Route::put('/admin/users/{id}', 'admin\UsersController@update');
+
+Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete');
 
 //Admin Users
 
