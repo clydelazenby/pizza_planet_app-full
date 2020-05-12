@@ -105,7 +105,14 @@
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/cards.html">General Settings</span></a>
+                                            <a class="nav-link" href="/admin/settings/general">General Settings</span></a>
+                                        </li>
+                            
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/settings/seo">SEO</span></a>
+                                        </li>
+                                         <li class="nav-item">
+                                            <a class="nav-link" href="/admin/settings/social">Social Accounts</span></a>
                                         </li>
                                       
                                     </ul>
