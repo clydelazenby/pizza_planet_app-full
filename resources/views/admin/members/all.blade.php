@@ -1,11 +1,6 @@
-  
 @extends('layouts.admin')
 
-
-
-
 @section('content')
-
             <div class="container-fluid  dashboard-content">
                 <!-- ============================================================== -->
                 <!-- pageheader -->
@@ -19,7 +14,6 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                                    
                                         <li class="breadcrumb-item active" aria-current="page">All Offers Members</li>
                                     </ol>
                                 </nav>
@@ -37,7 +31,7 @@
                         <!-- ============================================================== -->
                         <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                             <div class="card">
-                                <h5 class="card-header">All  Members</h5>
+                                <h5 class="card-header">All Members</h5>
                                 <div class="card-body">
                                     <table class="table">
                                         <thead>
@@ -46,31 +40,44 @@
                                                 <th scope="col">Full Name</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Phone Number</th>
-                                                <th scope="col">Date Created</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Delete</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Billy Jones</td>
-                                                <td>Billy@gmail.com</td>
-                                                <td>919-919-9100</td>
-                                                <td>2/2/2020</td>
-                                                
-                                            </tr>
-                                         
+                                            @foreach ($members as $member)
+                                                <tr>
+                                                    <th scope="row">{{$member->id}}</th>
+                                                    <td>{{$member->fname}} {{$member->lname}}</td>
+                                                    <td>{{$member->email}}</td>
+                                                    <td>{{$member->phone_number}}</td>
+                                                    <td>{{date('m/d/Y', strtotime($member->updated_at))}}</td>
+                                                    
+                                                    <td>
+                                                        
+                                                        <a href="#" onclick="event.preventDefault();
+                                document.getElementById('delete-member-{{$member->id}}').submit();">
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
+                                <form id="delete-member-{{$member->id}}" action="/admin/members/{{$member->id}}/delete" method="POST" style="display: none;">
+                                                @method('DELETE')
+                                                @csrf
+                                            </form>
+
+                                                    </td>
+                                                </tr>    
+                                            @endforeach
+                                            
                                         </tbody>
                                     </table>
+                                    {{ $members->links() }}
                                 </div>
                             </div>
                         </div>
                         <!-- ============================================================== -->
                         <!-- end basic table -->
+                        
                         <!-- ============================================================== -->
-                        <!-- ============================================================== -->
-                        <!-- striped table -->
-                       </div>
-       
+                    </div>
+            
 @endsection
-  
-  
