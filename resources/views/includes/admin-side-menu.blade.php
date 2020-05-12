@@ -40,7 +40,7 @@
                                             </div>
                                         </li>
                                                <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2-1" aria-controls="submenu-1-1">Food Items</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2-1" aria-controls="submenu-2-1">Food Items</a>
                                             <div id="submenu-2-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                      <li class="nav-item">

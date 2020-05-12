@@ -14,20 +14,19 @@ class CreateFoodItemsTable extends Migration
     public function up()
     {
         Schema::create('food_items', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('title');
             $table->text('description');
             $table->text('image_url');
-            $table->integer('price');
-            $table->integer('category_id')->unsigned()->nullable();
+            $table->float('price', 8, 2);
+            $table->bigInteger('category_id')->unsigned()->nullable();
             $table->timestamps();
         });
 
         Schema::table('food_items', function (Blueprint $table) {
-            $table->foreign('category_id')->references('id')->on('food_categories')
-           ->onDelete('set null');
-        
-       });
+            $table->foreign('category_id')->references('id')->on('food_categories')->onDelete('set null');
+           
+        });
     }
 
     /**
