@@ -56,9 +56,9 @@ Route::post('/admin/food-items', 'admin\FoodItemsController@store');
 
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
 
-Route::put('/admin/users/{id}', 'admin\UsersController@update');
+Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
 
-Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete');
+Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
 //Admin Users
 
@@ -75,9 +75,10 @@ Route::put('/admin/users/{id}', 'admin\UsersController@update');
 Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete');
 
 //Admin Customers
+//Admin Members
+Route::get('/admin/members','admin\MemberController@index');
 
-Route::get('/admin/offers-members','admin\CustomersController@allOffersMembers');
-
+//Admin Reservations
 Route::get('/admin/reservations','admin\CustomersController@allReservations');
 
 
