@@ -1,37 +1,45 @@
 <div class="side-menu">
-            <a href="/" class="logo">
-            
-                <img src="https://cdn.clipart.email/e07e234760ce1954118f8fc00f0239a8_toy-story-pizza-planet-logos_900-900.jpeg">
-            </a>
-            <div class="menu">
-                <div class="menu-title">
-                    Menu
-                </div>
-                <ul class="links">
-                    <li><a href="/menu">Food</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/reservations">Reservations</a>
-                    </li>
-                   <li>
-                        <a href="offers">Offers</a>
-                    </li>
-                    <li>
-                        <a href="contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="social-icons">
-
-                <a href="www.facebook.com"><i class="fab fa-facebook-square"></i></a>
-                <a href="www.twitter.com"><i class="fab fa-twitter-square"></i></a>
-                <a href="www.instagram.com"><i class="fab fa-instagram-square"></i></a>
-            </div>
-            <div class="location">
-                <div class="address">
-                    1234 Main St <br> Raleigh NC, 27616
-                </div>
-                <div class="phone-number">
-                    <a href="tel:7048675309">704-867-5309</a>
-                </div>
-            </div>
-        </div>
+  <a href="/" class="logo">
+    <img src="{{$settings["general"]->logo_image_url}}">
+  </a>
+  <div class="menu">
+    <div class="menu-title">
+      Menu
+    </div>
+    <ul class="links">
+      <li>
+        <a href="menu/all-categories">Food</a>
+      </li>
+      <li>
+        <a href="/about">About Us</a>
+      </li>
+      
+      <li>
+        <a href="/reservations">Reservations</a>
+      </li>
+      <li>
+        <a href="/offers">Offers</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="social-icons">
+    <a href="{{$settings["social"]->facebook_url}}" target="new">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+    </a>
+    <a href="{{$settings["social"]->twitter_url}}" target="new"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="{{$settings["social"]->instagram_url}}" target="new"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  </div>
+  <div class="location">
+    <div class="address">
+      {{$settings["general"]->address_1}} {{$settings["general"]->address_2}},<br>
+      {{$settings["general"]->city}}, {{$settings["general"]->state}} {{$settings["general"]->zipcode}}
+    </div>
+    <div class="phone-number">
+      <a href="tel:{{$settings["general"]->phone_number}}">{{$settings["general"]->phone_number}}</a>
+    </div>
+  </div>
+</div>

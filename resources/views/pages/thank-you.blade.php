@@ -1,8 +1,8 @@
 @extends('layouts.app')
-
-@section('title')
+{{-- 
+@section('title') --}}
 {{-- Thank You - {{$settings["general"]->site_title}}  --}}
-@endsection
+{{-- @endsection --}}
 
 @section('content')
     <div id="offers-page">
@@ -18,4 +18,5 @@
         </div>
       </div>
     </div>
+    
 @endsection

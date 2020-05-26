@@ -1,7 +1,9 @@
 <!-- Stored in resources/views/child.blade.php -->
 
 @extends('layouts.app')
-
+{{-- @section('title')
+{{$foodItem}} - {{$settings["general"]->site_title}} 
+@endsection --}}
 
 
 

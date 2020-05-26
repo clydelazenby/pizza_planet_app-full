@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-{{-- Offers - {{$settings["general"]->site_title}}  --}}
+Offers - {{$settings["general"]->site_title}} 
 @endsection
 
 @section('content')
