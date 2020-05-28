@@ -13,8 +13,8 @@ class FoodItemSeeder extends Seeder
     public function run()
     {
         DB::table('food_items')->insert([
-            'title' => 'BBQ Wings',
-            'description' => 'Crispy or grilled',
+            'title' => 'Wings',
+            'description' => 'BBQ Wings',
             'image_url' => 'img/wings.png',
             'price' => 9.99,
             'category_id' => 2,
@@ -45,6 +45,16 @@ class FoodItemSeeder extends Seeder
         DB::table('food_items')->insert([
             'title' => 'House Hot Sauce',
             'description' => 'Crispy or grilled',
+            'image_url' => 'img/wings.png',
+            'price' => 9.99,
+            'category_id' => 2,
+            'updated_at' => Carbon::now(),
+            'created_at' => Carbon::now()
+        ]);
+
+        DB::table('food_items')->insert([
+            'title' => 'Pizza',
+            'description' => 'Galaxy Pizza',
             'image_url' => 'img/wings.png',
             'price' => 9.99,
             'category_id' => 2,

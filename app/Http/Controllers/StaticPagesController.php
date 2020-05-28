@@ -7,14 +7,19 @@ use App\Member;
 use App\Reservation;
 use App\GeneralSetting;
 use App\SocialSetting;
+use App\FoodCategory;
+use App\FoodItem;
 
 
 class StaticPagesController extends Controller
 {
     public function home(){
        
+        $categories = FoodCategory::all();
 
-        return view('home');
+        return view('home', [
+            "categories" => $categories
+        ]);
     }
     
     public function about(){
@@ -76,14 +81,22 @@ class StaticPagesController extends Controller
         return view('pages/thank-you');
     }
     public function menu(){
-        return view('menu/index');
+
+        $categories = FoodCategory::all();
+
+        return view('menu/all-categories', [
+            'categories' => $categories
+        ]);
+
     }
 
-    public function singleMenu(){
-        return view('menu/single-menu');
+    public function singleMenu($slug){
+        $foodCategory  = FoodCategory::where('title', '=', $slug)->first();
+        $foodItems  = FoodItem::where('category_id', '=', $foodCategory->id)->get();
+
+        return view('menu/single-menu', [
+            "foodItem" => ucfirst($slug),
+            "foodItems" => $foodItems
+        ]);
     }
-
-
-
-
 }
