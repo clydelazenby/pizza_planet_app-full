@@ -350,6 +350,10 @@ table {
     padding: 20px;
   }
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .welcome-jumbo {
   transform: translate3d(300px, 0, 0);
   max-width: calc(100vw - 300px);
@@ -357,12 +361,10 @@ table {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #ed4852;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-image: url("https://images.squarespace-cdn.com/content/v1/63c9d3d9c277c44cc5278433/0307c9ef-461d-41ec-8177-57a0e1b377d7/PizzaPlanetbackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   overflow: hidden;
   padding: 100px;
 }
@@ -504,6 +506,7 @@ body {
   color: #7a8d99;
   margin-bottom: 20px;
   line-height: 1.7;
+  padding-right: 1px;
 }
 #app-layout .side-menu .location .phone-number a {
   color: #0971ce;

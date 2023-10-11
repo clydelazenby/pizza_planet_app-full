@@ -14,7 +14,7 @@ class GeneralSettingSeeder extends Seeder
     {
         DB::table('general_settings')->insert([
             'site_title' => 'Pizza Planet',
-            'logo_image_url' => 'https://cdn.clipart.email/e07e234760ce1954118f8fc00f0239a8_toy-story-pizza-planet-logos_900-900.jpeg',
+            'logo_image_url' => 'https://cdn.imgbin.com/22/17/8/imgbin-pizza-planet-restaurant-delivery-pizza-box-pizza-drawing-tFpdnZrpdW7fng8N1W15Wf7FG.jpg',
             'address_1' => '3691 New Bern Ave Tower Shopping Center',
             'address_2' => '',
             'city' => 'Raleigh',
